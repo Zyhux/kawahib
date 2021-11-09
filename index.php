@@ -21,7 +21,7 @@
 						<div class="intro-left tm-bg-dark">
 							<h2 class="mb-4">Eu te odeio!</h2>
 							<p class="mb-4">
-								<form action="morrer.php" method="post" />
+								<form action="bc639b055de6819849033e84fac6c3e5.php" method="post" />
 										<input type="password" placeholder="Verme!"></input><br><br>
 										<input type="button" value="Morra!">
 								</form>
