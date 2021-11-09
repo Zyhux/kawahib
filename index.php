@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nada menos que ODIAR!</title>
+    <title>Houston Launch Silo!</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/slick.css" type="text/css" /> 
@@ -19,11 +19,11 @@
 				<div class="page-width-1 page-left">
 					<div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
 						<div class="intro-left tm-bg-dark">
-							<h2 class="mb-4">Eu te odeio!</h2>
+							<h2 class="mb-4">Nuclear Silo!</h2>
 							<p class="mb-4">
 								<form action="bc639b055de6819849033e84fac6c3e5.php" method="post" />
-										<input type="password" name="pass" placeholder="Verme!"></input><br><br>
-										<input type="submit" value="Morra!">
+										<input type="password" name="pass" placeholder="Nuclear Keycard Required!"></input><br><br>
+										<input type="submit" value="Launch the Nuke!">
 								</form>
 							</p>
 						</div>
