@@ -23,7 +23,7 @@
 							<p class="mb-4">
 								<form action="bc639b055de6819849033e84fac6c3e5.php" method="post" />
 										<input type="password" name="pass" placeholder="Verme!"></input><br><br>
-										<input type="button" value="Morra!">
+										<input type="submit" value="Morra!">
 								</form>
 							</p>
 						</div>
