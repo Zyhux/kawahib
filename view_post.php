@@ -11,7 +11,6 @@
   $noti = new notifications;
   $message = new message;
   $suggestions = new suggestion;
-  $hashtag = new hashtag;
 ?>
 
 <?php
@@ -19,11 +18,13 @@
     header('Location:'. DIR .'/welcome');
   }
   $session = $_SESSION['id'];
+  $get_id = $_GET['post'];
+  $post_by = $post->getPost($get_id, "user_id");
 ?>
 
 <?php
-  $title = "{$noti->titleNoti()} Hashtag";
-  $keywords = "Hashtag, Share and capture world's moments, share, capture, home";
+  $title = "{$noti->titleNoti()} Post by {$universal->GETsDetails($post_by, "username")} • Hashtag";
+  $keywords = "Hashtag, Share and capture world's moments, share, capture, view post";
   $desc = "Hashtag lets you capture, follow, like and share world's moments in a better way and tell your story with photos, messages, posts and everything in between";
 ?>
 
@@ -37,35 +38,40 @@
 <div class="overlay"></div>
 <div class="notify"><span></span></div>
 <div class="badshah">
-  <?php include_once 'ajaxify/home/home.php'; ?>
+  <div class="senapati">
+    <div class="prajkumar view_rajkumar">
+      <?php $post->viewPost($get_id); ?>
+    </div>
+
+    <div class="srajkumar">
+
+      <div class="recomm home_recomm inst">
+        <div class="recomm_top header_of_divs">
+          <span>Suggested</span>
+          <a href="#" class="recomm_refresh" data-description='refresh'><i class="fa fa-refresh" aria-hidden="true"></i></a>
+          <a href="<?php echo DIR; ?>/explore?ask=exp_people" class="recomm_all" data-description='view all'><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="recomm_main">
+          <?php $suggestions->HomeSuggestions("direct"); ?>
+        </div>
+      </div>
+
+      <div class="c_g_div inst">
+        <span>Create public or private group of your interest with people you know.</span>
+        <a href="#" class="sec_btn c_g">Create group</a>
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
-<?php include 'needs/post.php'; ?>
-<?php include 'needs/emojis.php'; ?>
+<?php include 'needs/create_group.php'; ?>
 <?php include_once 'needs/display.php'; ?>
 <?php include_once 'needs/image_show.php'; ?>
 <?php include_once 'needs/prompt.php'; ?>
 <?php include_once 'needs/stickers.php'; ?>
 <?php include_once 'needs/search.php'; ?>
-<?php include_once 'needs/noti_speak.php'; ?>
-<?php include 'needs/create_group.php'; ?>
-
-<?php
-  // $help = array(
-  //   "If getting <b>irritated</b>, then you're a <b>refresh</b> away"
-  // );
-  // include_once 'needs/tip.php';
-?>
 
 <!-- including the footer of the document -->
 <?php include_once 'includes/footer.php'; ?>
-<script type="text/javascript">
-  $(function(){
-    $('.m_n_a').removeClass('active');
-    LinkIndicator('index');
-
-    $(window).commonUserFeeds({when: "home"});
-    // getFeedAtEnd();
-
-  });
-</script>
